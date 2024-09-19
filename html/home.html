@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home pages</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awsome libary -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-100">
+    <header class="p-5 w-11/12 md:w-[600px] mx-auto py-10 flex justify-between h-20 bg-white">
+        <div class="flex justify-center items-center gap-2">
+            <div><img src="../img/logo.png" alt="" class="w-14"></div>
+            <div class="space-y-1">
+                <h2 class="font-bold text-xl">$<span id="balance">3000</span></h2>
+                <p class="font-medium text-zinc-500">Available Balance</p>
+            </div>
+        </div>
+        <div class="flex justify-center items-center"><button id="logout" class="py-2 px-5 text-base font-medium bg-zinc-200 text-zinc-600 rounded-lg"><i class="fa-solid fa-right-from-bracket"></i> Log Out</button></div>
+    </header>
+    <main class="w-11/12 md:w-[600px] mx-auto">
+        <section class="bg-white py-10 rounded-bl-lg rounded-br-lg">
+            <h1 class="font-bold text-3xl py-2 px-5">🔥Welcome to Payoo!</h1>
+        <p class="text-lg tracking-wider text-zinc-500 px-5">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+        <section class="grid grid-cols-3 gap-6 mt-10 p-5">
+            <div id="btnAddMoney" class="select-none flex flex-col border-2 py-5 gap-2 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition duration-200 items-center cursor-pointer">
+                <img src="../img/icon/addmaney.png" alt="" class="w-7 h-7">
+                <p class="text-zinc-500 font-light">Add Money</p>
+            </div>
+            <div id="btnCashOut" class="select-none flex flex-col border-2 py-5 gap-2 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition duration-200 items-center cursor-pointer">
+                <img src="../img/icon/casout.png" alt="" class="w-7 h-7">
+                <p class="text-zinc-500 font-light">Cashout</p>
+            </div>
+            <div class="select-none flex flex-col border-2 py-5 gap-2 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition duration-200 items-center cursor-pointer">
+                <img src="../img/icon/transfer.png" alt="" class="w-7 h-7">
+                <p class="text-zinc-500 font-light">Transfer Money</p>
+            </div>
+            <div class="select-none flex flex-col border-2 py-5 gap-2 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition duration-200 items-center cursor-pointer">
+                <img src="../img/icon/getbonus.png" alt="" class="w-7 h-7">
+                <p class="text-zinc-500 font-light">Get Bonus</p>
+            </div>
+            <div class="select-none flex flex-col border-2 py-5 gap-2 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition duration-200 items-center cursor-pointer">
+                <img src="../img/icon/paybill.png" alt="" class="w-7 h-7">
+                <p class="text-zinc-500 font-light">Pay Bill</p>
+            </div>
+            <div class="select-none flex flex-col border-2 py-5 gap-2 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition duration-200 items-center cursor-pointer">
+                <img src="../img/icon/transactions.png" alt="" class="w-7 h-7">
+                <p class="text-zinc-500 font-light">Transactions</p>
+            </div>
+        </section>
+        </section>
+        <!-- add money section -->
+         <section class="my-5 mx-5 hidden" id="addMoney">
+            <h2 class="font-semibold text-2xl">Add Money</h2>
+            <form action="" class="flex flex-col gap-5 p-5 bg-white rounded-lg mt-5">
+                <label for="" class="font-semibold font-lg italic">Bank Name</label>
+                <select name="bankName" id="bankName" class="font-medium p-3 rounded-full text-lg border-2 focus:outline-none focus:border-blue-500">
+                    <option value="select">Select Bank</option>
+                    <option value="Pubali">Pubali</option>
+                    <option value="Grammin">Grammin</option>
+                    <option value="Dash Bangla">Dash Bangla</option>
+                </select>
+                <label for="" class="font-semibold font-lg italic">Accound Number</label>
+                <input type="text" placeholder="Accound Number" id="accoundNumber" class="font-medium p-3 rounded-full text-lg border-2 focus:outline-none focus:border-blue-500">
+                <label for="" class="font-semibold font-lg italic">Amount Number</label>
+                <input type="text" placeholder="Amount" id="amount" class="font-medium p-3 rounded-full text-lg border-2 focus:outline-none focus:border-blue-500">
+                <label for="" class="font-semibold font-lg italic">Pin Number</label>
+                <input type="text" placeholder="Pin Number" id="pinNumber" class="font-medium p-3 rounded-full text-lg border-2 focus:outline-none focus:border-blue-500">
+                <input type="submit" id="addMoneySubmit" value="Add Money" class="cursor-pointer py-3 px-6 font-semibold text-lg bg-blue-500 hover:bg-blue-600 rounded-full text-white">
+            </form>
+         </section>
+        <!-- cachout money section -->
+         <section class="my-5 mx-5 hidden" id="cashOut">
+            <h2 class="font-semibold text-2xl">Cashout Money</h2>
+            <form action="" class="flex flex-col gap-5 p-5 bg-white rounded-lg mt-5">
+                <label for="" class="font-semibold font-lg italic">Accound Number</label>
+                <input type="text" placeholder="Accound Number" id="accoundNumberCashOut" class="font-medium p-3 rounded-full text-lg border-2 focus:outline-none focus:border-blue-500">
+                <label for="" class="font-semibold font-lg italic">Amount Number</label>
+                <input type="text" placeholder="Amount" id="amountCashOut" class="font-medium p-3 rounded-full text-lg border-2 focus:outline-none focus:border-blue-500">
+                <label for="" class="font-semibold font-lg italic">Pin Number</label>
+                <input type="text" placeholder="Pin Number" id="pinNumberCashOut" class="font-medium p-3 rounded-full text-lg border-2 focus:outline-none focus:border-blue-500">
+                <input type="submit" id="cashOutSumit" value="Cash Out" class="cursor-pointer py-3 px-6 font-semibold text-lg bg-blue-500 hover:bg-blue-600 rounded-full text-white">
+            </form>
+         </section>
+    </main>
+
+    <script src="../js/homeHeader.js"></script>
+    <script src="../js/addMoney.js"></script>
+    <script src="../js/cashOut.js"></script>    
+</body>
+</html>
